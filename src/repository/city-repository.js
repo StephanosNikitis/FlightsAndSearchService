@@ -1,6 +1,7 @@
 const { City } = require('../models/index')
 
 class CityRepository {
+
     async createCity({ name }) {
         try {
             const city = await City.create({ name })
@@ -24,6 +25,7 @@ class CityRepository {
             throw {error}
         }
     }
+    
      async updateCity(cityId, data) {
         try {
             // The below approach also works but will not return updated object
